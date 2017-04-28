@@ -14,3 +14,5 @@ print_r(get_user());
 ?></pre>
 
 <p><a href="activate.php">Activate 2FA</a></p>
+
+<p><a href="logout.php">Log out</a></p>
