@@ -1,0 +1,16 @@
+{
+    "name": "rdx/2fa",
+    "type": "project",
+    "require": {
+        "bacon/bacon-qr-code": "^1.0",
+        "christian-riesen/base32": "^1.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rudie Dirkx",
+            "email": "rudie@ezcompany.nl"
+        }
+    ],
+    "minimum-stability": "dev"
+}
