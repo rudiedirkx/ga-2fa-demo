@@ -19,7 +19,7 @@ function do_login($mail) {
 }
 
 function do_logout() {
-	unset($_SESSION['2fa']['mail']);
+	unset($_SESSION['2fa']);
 }
 
 function do_create_user( $mail ) {
