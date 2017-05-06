@@ -29,7 +29,7 @@ function do_create_user( $mail ) {
 }
 
 function do_save($db) {
-	return file_put_contents(PROJECT_DB_FILE, json_encode($db));
+	return file_put_contents(PROJECT_DB_FILE, json_encode($db, JSON_PRETTY_PRINT) . "\n");
 }
 
 function get_authenticator_uri($mail, $secret) {
@@ -71,7 +71,7 @@ function get_code($secret, $count) {
 function get_codes($secret) {
 	$codes = [];
 	for ( $offset = -3; $offset <= 3; $offset++ ) {
-		$codes[] = get_code($secret, (int)(time()/30 + $offset));
+		$codes[] = get_code($secret, floor(time()/30) + $offset);
 	}
 
 	return $codes;
